@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="makeWar" basedir="." default="make.war">
+	<target name="make.war" depends="">
+		<echo message="${basedir}" />
+		<delete file="${basedir}/QuestionBase.war" />
+		<war warfile="${basedir}/QuestionBase.war" webxml="${basedir}/WebContent/WEB-INF/web.xml">
+			<lib dir="${basedir}/WebContent/WEB-INF/lib" />
+			<classes dir="${basedir}/build/classes" />
+			<fileset dir="${basedir}/WebContent/" />
+		</war>
+	</target>
+</project>
